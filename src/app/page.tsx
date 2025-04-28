@@ -35,6 +35,7 @@ export default function LoginPage() {
                 setUserData(null);
             }
         } catch (error) {
+            console.error("Error en el servidor:", error); // Registrar el error en la consola
             setIsSuccess(false);
             setMessage('Error al conectar con el servidor');
             setUserData(null);

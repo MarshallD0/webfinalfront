@@ -37,6 +37,7 @@ export async function POST(request: Request) {
             );
         }
     } catch (error) {
+        console.error("Error en el servidor:", error); // Registrar el error en la consola
         return NextResponse.json(
             { success: false, error: "Error en el servidor" },
             { status: 500 }
